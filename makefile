@@ -1,7 +1,6 @@
 export EXECUTABLE := out
 #default: $(EXECUTABLE)
 export SHELL := /bin/bash
-export DEBUG_FLAGS ?= -O3
 export SOURCE_FILES := $(wildcard *.cpp)
 export OBJ_FILES := $(patsubst %.cpp, %.o, $(SOURCE_FILES))
 export DEP_FILES := $(patsubst %.cpp, %.dep, $(SOURCE_FILES))
@@ -28,16 +27,16 @@ test:
 
 .PHONY: debug
 debug:
-	@$(MAKE) DEBUG_FLAGS="-g"
+	@$(MAKE) 
 	@gdb ./$(EXECUTABLE)
 
 .PHONY: release
 release:
-	@$(MAKE) DEBUG_FLAGS="-O3"
+	@$(MAKE) 
 .PHONY: profile
 profile: 
 	@echo "profile proces"
-	@$(MAKE) DEBUG_FLAGS="-pg"
+	@$(MAKE) 
 	@./$(EXECUTABLE)
 	@gprof ./$(EXECUTABLE)
 	
