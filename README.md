@@ -1,4 +1,4 @@
-# matrixesA simple and efficient template based matrix library.
+# A simple and efficient template based matrix library.
 
 ## License
 * (AMS) The Matrix library is licensed under a permissive license AMS
