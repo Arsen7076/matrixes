@@ -2,7 +2,7 @@
 
 ## License
 * (AMS) The Matrix library is licensed under a permissive license AMS
-* 
+* GNU General Public License v3.0
 
 ## Features
 * Compile time size checking.
